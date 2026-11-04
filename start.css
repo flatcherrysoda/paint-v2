@@ -4,24 +4,91 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    display: grid;
+    display: flex;
     place-items: center;
     height: 100vh;
 }
 .wrap{
-    background-color: aqua;
+    height: 20rem;
+    background-color: rgba(0, 255, 60, 0.002);
     width: 75%;
     text-align: center;
     display: grid;
     place-items: center;
+    margin: 0 auto;
+    position: relative;
+    top:-4rem;
 }
-h1{
+
+@keyframes tilt{
+    from{ transform: rotate(3deg);}
+    to{transform: rotate(-3deg);}
     
-    color: aliceblue;
-   
+}
+
+h1{
+    text-shadow: 0 0 5px #fff, 0 0 10px #e67f00, 0 0 15px #e67f00, 0 0 20px #e67f00, 0 0 25px #e67f00;
+    color: #fff;
+   animation-name: tilt;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   font-size: 4rem;
 }
 
 .intro{
+    font-size: 1.5rem;
    text-align: center;
-    width: 75%;
+    width: 70%;
+}
+
+a{
+    color: #fff;
+    background: #ecb27c;
+    border: 0.2rem dotted #fff;
+    box-shadow: 0 0 0 0.3rem #ecb27c;
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    text-decoration: none;
+
+    
+}
+
+.outframe{
+    width: 0;
+    height: 0;
+    float: right;
+    position: relative;
+    right: 4%;
+    top: -10rem;
+}
+
+
+.frame1{
+    background-color: #c0812a;
+    float: right;
+    width: 14rem;
+    height: 20rem;
+    border: 0.5rem double #ecb27c;
+}
+
+.outframe2{
+    width: 0;
+    height: 0;
+    float: left;
+    position: relative;
+    left:-99vw;
+    top: -5rem;
+}
+
+
+.frame2{
+    background-color: #f0e067;
+    width: 17rem;
+    height: 10rem;
+   
+    position: relative;
+    border: 0.5rem double #ecb27c;
 }
